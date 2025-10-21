@@ -10,7 +10,6 @@ function bunkableHours(totalHours, totalHoursTaken, totalHoursAttended) {
 
   let bunkableHours = totalBunkable - hoursNotAttended;
   return bunkableHours;
-
 }
 
 function needHours(totalHours, totalHoursAttended, totalTakenHours) {
@@ -18,6 +17,8 @@ function needHours(totalHours, totalHoursAttended, totalTakenHours) {
     let hoursNeeded = 0
     while (finalPercentage <= 75)
     {
-        
+        hoursNeeded += 1
+        finalPercentage = (100*(totalHoursAttended+hoursNeeded)/totalHoursTaken+hoursNeeded)
     }
+    return hoursNeeded
 }
