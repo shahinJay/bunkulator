@@ -12,5 +12,33 @@ body{
     background-color: black;
     
     color: white;
+    
+}
 
+#mainForm{
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: right;
+
+    font-size: large;
+    line-height: 100px;
+}
+
+fieldset{
+    padding-right: 15%;
+}
+
+#topDiv{
+    background-color: #294C60;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+#formDiv{
+    padding-top: 50px;
+}
+
+.special{
+    color: rgb(209, 191, 53);
 }
