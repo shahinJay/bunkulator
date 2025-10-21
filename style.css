@@ -32,7 +32,7 @@ fieldset{
 }
 
 #topDiv{
-    background-color: #294C60;
+    background-image: linear-gradient(to right,#294C60, rgb(75, 44, 116));
     padding-top: 20px;
     padding-bottom: 15px;
 }
@@ -41,6 +41,23 @@ fieldset{
     padding-top: 50px;
 }
 
+#displayDiv{
+    padding-top:40px;
+    width: 80%;
+    height: 400px;
+    margin:0 auto;
+    
+    background-image: linear-gradient(to top, black, rgb(75, 44, 116));
+
+    text-align: center;
+
+    font-size: large;
+    line-height: 30px;
+}
+
+.results{
+    color: rgb(209, 191, 53);
+}
 #calculateButton{
     background-color: rgb(209, 191, 53);
     border: 0;
