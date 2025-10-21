@@ -14,5 +14,5 @@ function bunkableHours(totalHours, totalHoursTaken, totalHoursAttended) {
 }
 
 function needHours(totalHours, totalHoursTaken, totalHoursAttended) {
-
+  
 }
