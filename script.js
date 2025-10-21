@@ -39,7 +39,6 @@ function calculate() {
   let hoursLeft = totalHours-totalHoursTaken
 
   if (Number(attendancePercentageResult) < 75) {
-    alert("wow");
     needHoursResult = String(needHours(totalHours, totalHoursTaken,totalHoursAttended));
     if (needHoursResult < hoursLeft){
         
