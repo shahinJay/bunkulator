@@ -9,11 +9,38 @@
         
         <link rel="Stylesheet" href="style.css">
         <title>Attendance Calculator</title>
-
-
     </head>
 
     <body>
-        <h1> Welcome to Attendance Calculator</h1>
+        <div id="topDiv">
+            <h1> Attendance Calculator</h1>
+            <h4> by <span class="special">SimpleSide</span> and <a href="https://www.instagram.com/ironpinegames?igsh=d2Jqd2NrNmphaHNt"><span class="special">Eternus</span></a></h4>
+        </div>
+        
+        <div id="formDiv">
+            <form id="mainForm">
+                <fieldset >
+                    Total hours : <input type="text" id="totalHours" value="" class="textBoxes" autofocus> 
+                    <br>
+                    Total hours taken : <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
+                    <br>
+                    Total hours attended : <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+
+                    <!--input type="button" value="Calculateee" id="calculateButton" onclick="calculate()"-->
+                    <br>
+                    <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="displayDiv">
+            Percentage: <h2 id="displayP" class="results">N/A</h2>
+            Hours Needed: <h2 id="displayHN" class="results">N/A</h2>
+            Hours Bunkable: <h2 id="displayHB" class="results">N/A</h2>
+        </div>
+
+
+        <script src="script.js"></script>
     </body>
+    
 </html>

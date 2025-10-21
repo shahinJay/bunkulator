@@ -5,3 +5,85 @@ body{
     text-align: center;
     font-family: "Bitcount Grid Single";
 }
+
+.textBoxes{
+    border-width: 1px;
+    border: 0;
+    background-color: #284C60;
+    border-radius: 16px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-family: "Bitcount Grid Single";
+    
+}
+
+#mainForm{
+    background-image: linear-gradient(to bottom, black, #294C60);
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: right;
+
+    font-size: large;
+    line-height: 100px;
+}
+
+fieldset{
+    border: 0;
+    padding-right: 29%;
+}
+
+#topDiv{
+    background-image: linear-gradient(to right,#294C60, rgb(75, 44, 116));
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+#formDiv{
+    padding-top: 50px;
+}
+
+#displayDiv{
+    padding-top:40px;
+    width: 80%;
+    height: 400px;
+    margin:0 auto;
+    
+    background-image: linear-gradient(to top, black, rgb(75, 44, 116));
+
+    text-align: center;
+
+    font-size: large;
+    line-height: 30px;
+}
+
+.results{
+    color: rgb(209, 191, 53);
+}
+#calculateButton{
+    background-color: rgb(209, 191, 53);
+    border: 0;
+    width: 240px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 15%;
+
+    text-align: center;
+    color: #ffffff;
+    font-family: "Bitcount Grid Single";
+    letter-spacing: 2px;
+    font-weight: bolder;
+
+}
+
+#calculateButton:hover{
+    background-color: white;
+    color: #294C60;
+
+}
+
+.special{
+    color: rgb(209, 191, 53);
+}
