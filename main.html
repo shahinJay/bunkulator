@@ -20,13 +20,15 @@
         <div id="formDiv">
             <form id="mainForm">
                 <fieldset >
-                    Total hours : <input type="text" id="totalHours" value="0" class="textBoxes" autofocus> 
+                    Total hours : <input type="text" id="totalHours" value="100" class="textBoxes" autofocus> 
                     <br>
-                    Total hours taken : <input type="text" id="totalHoursTaken=" value="0" class="textBoxes">
+                    Total hours taken : <input type="text" id="totalHoursTaken=" value="50" class="textBoxes">
                     <br>
-                    Total hours attended : <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+                    Total hours attended : <input type="text" id="totalHoursAttended" value="20" class="textBoxes">
+
+                    <!--input type="button" value="Calculateee" id="calculateButton" onclick="calculate()"-->
                     
-                    <button id="calculateButton" onclick="">Calculate</button>
+                    <button id="calculateButton" onclick="calculate()">Calculate</button>
                 </fieldset>
             </form>
         </div>
@@ -37,5 +39,8 @@
             Hours Bunkable: <h2 id="displayHB" class="results">0</h2>
         </div>
 
+
+        <script src="script.js"></script>
     </body>
+    
 </html>
