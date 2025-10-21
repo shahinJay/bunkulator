@@ -13,14 +13,6 @@ function bunkableHours(totalHours, totalHoursTaken, totalHoursAttended) {
 
 }
 
-function needHours(totalHours, totalHoursAttended, totalTakenHours) {
-    let finalPercentage = 0
-    let hoursNeeded = 0
-    while (finalPercentage <= 75)
-    {
-        
-    }
-}
 
 function displayP(percentage) {
   document.getElementById("displayP").innerText = percentage;
