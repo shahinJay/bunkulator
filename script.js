@@ -41,11 +41,11 @@ function calculate() {
   let totalHoursTaken = document.getElementById("totalHoursTaken").value;
   let totalHoursAttended = document.getElementById("totalHoursAttended").value;
 
-  let bunkableHours = bunkableHours(totalHours, totalHoursTaken, totalHoursAttended);
-  let attendancePercentage = attendancePercentage(totalHoursTaken, totalHoursAttended);
-  let needHours = needHours(totalHours, totalHoursAttended, totalHoursTaken);
+  let bunkableHoursResult = bunkableHours(totalHours, totalHoursTaken, totalHoursAttended);
+  let attendancePercentageResult = attendancePercentage(totalHoursTaken, totalHoursAttended);
+  let needHoursResult = needHours(totalHours, totalHoursAttended, totalHoursTaken);
 
-  displayPercentage(attendancePercentage);
-  displayHoursNeeded(needHours);
-  displayBunkableHours(bunkableHours);
+  displayPercentage(attendancePercentageResult);
+  displayHoursNeeded(needHoursResult);
+  displayBunkableHours(bunkableHoursResult);
 }
