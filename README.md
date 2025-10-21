@@ -1,1 +1,2 @@
-# attendance-calculator
+# Bunkulator
+https://shahinjay.github.io/bunkulator/
