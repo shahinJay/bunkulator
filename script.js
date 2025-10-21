@@ -22,10 +22,14 @@ function needHours(totalHours, totalHoursAttended, totalTakenHours) {
     }
 }
 
+function displayP(percentage) {
+  document.getElementById("displayP").innerText = percentage;
+}
+
 let totalHours = document.getElementById("totalHours").value;
 let totalHoursTaken = document.getElementById("totalHoursTaken").value;
 let totalHoursAttended = document.getElementById("totalHoursAttended").value;
 
 let bunkableHours = bunkableHours(totalHours, totalHoursTaken, totalHoursAttended);
 let attendancePercentage = attendancePercentage(totalHoursTaken, totalHoursAttended);
-let needHours = needHours(totalHours, totalHoursAttended, totalTakenHours);
+let needHours = needHours(totalHours, totalHoursAttended, totalHoursTaken);
