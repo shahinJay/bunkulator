@@ -10,37 +10,25 @@ function bunkableHours(totalHours, totalHoursTaken, totalHoursAttended) {
 
   let bunkableHours = totalBunkable - hoursNotAttended;
   return bunkableHours;
-
 }
 
-function needHours(totalHoursTaken,totalHoursAttended) {
+function needHours(totalHours, totalHoursTaken,totalHoursAttended) {
     let finalPercentage = 0
     let hoursNeeded = 0
-    alert(finalPercentage)
-    console.log(finalPercentage)
-    while (finalPercentage <= 75)
-    {
-        console.log(finalPercentage)
-        hoursNeeded += 100;
-        let numerator = 100*(totalHoursAttended+hoursNeeded);
-        let denominator = totalHoursTaken+hoursNeeded;
-        finalPercentage = numerator/denominator;
 
-        if (finalPercentage>80)
-        {
-            alert(finalPercentage)
-            break;
-        }
+    while (finalPercentage <= 75 && (totalHoursTaken + hoursNeeded) < totalHours) {
+        hoursNeeded += 1;
+        finalPercentage = (100 * (totalHoursAttended + hoursNeeded)) / (totalHoursTaken + hoursNeeded);
+        console.log(hoursNeeded, finalPercentage);
     }
-    alert("son of a b")
     return hoursNeeded
 }
 
 function calculate() {
     
-  let totalHours = document.getElementById("totalHours").value;
-  let totalHoursTaken = document.getElementById("totalHoursTaken").value;
-  let totalHoursAttended = document.getElementById("totalHoursAttended").value;
+  let totalHours = Number(document.getElementById("totalHours").value);
+  let totalHoursTaken = Number(document.getElementById("totalHoursTaken").value);
+  let totalHoursAttended = Number(document.getElementById("totalHoursAttended").value);
 
 
   let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
@@ -48,15 +36,29 @@ function calculate() {
 
   let needHoursResult = 0
 
-  if (attendancePercentageResult < 75) {
-    needHoursResult = String(needHours(totalHoursTaken,totalHoursAttended));
+  let hoursLeft = totalHours-totalHoursTaken
+
+  if (Number(attendancePercentageResult) < 75) {
+    alert("wow");
+    needHoursResult = String(needHours(totalHours, totalHoursTaken,totalHoursAttended));
+    if (needHoursResult < hoursLeft){
+        
+        document.getElementById("displayHN").textContent = needHoursResult;
+    }
+    else{
+        document.getElementById("displayHN").textContent = "You're cooked bro :( ";
+    }
   }
   else{
-    needHoursResult = "NUH UH";
+    document.getElementById("displayHN").textContent = "You're all set dude :) "
   }
 
-    
-  document.getElementById("displayP").textContent = attendancePercentageResult;
-  document.getElementById("displayHN").textContent = needHoursResult;
-  document.getElementById("displayHB").textContent = bunkableHoursResult;
+  document.getElementById("displayP").textContent = attendancePercentageResult + " %";
+
+  if(bunkableHoursResult > 0){
+    document.getElementById("displayHB").textContent = bunkableHoursResult;
+  }
+  else{
+    document.getElementById("displayHB").textContent = "Don't even think about it :P";
+  }
 }

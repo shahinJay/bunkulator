@@ -20,7 +20,7 @@ body{
     width: 80%;
     margin: 0 auto;
 
-    text-align: right;
+    text-align: center;
 
     font-size: large;
     line-height: 100px;
@@ -28,7 +28,7 @@ body{
 
 fieldset{
     border: 0;
-    padding-right: 15%;
+    padding-right: auto;
 }
 
 #topDiv{
