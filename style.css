@@ -5,3 +5,12 @@ body{
     text-align: center;
     font-family: "Bitcount Grid Single";
 }
+
+.textBoxes{
+    border-width: 1px;
+    border-color: #294C60;
+    background-color: black;
+    
+    color: white;
+
+}
