@@ -19,16 +19,49 @@
         
         <div id="formDiv">
             <form id="mainForm">
-                <fieldset >
-                    Total hours : <input type="text" id="totalHours" value="" class="textBoxes" autofocus> 
-                    <br>
-                    Total hours taken : <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
-                    <br>
-                    Total hours attended : <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+                <fieldset>
+                    <table id="formTable">
+                        <tr >
+                            <td id="table1left">
+                                Total hours
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="totalHours" value="" class="textBoxes" autofocus> 
+                            </td>
+                        </tr>
+                        <tr >
+                            <td id="table1left">
+                                Total hours taken
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
+                            </td>
+                        </tr>
+                        <tr >
+                            <td id="table1left">
+                                Total hours attended
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+                            </td>
+                        </tr>
 
-                    <!--input type="button" value="Calculateee" id="calculateButton" onclick="calculate()"-->
-                    <br>
-                    <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
+                        <tr>
+                            <th id="table1bottom" colspan="3">
+                                <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
+                            </th>
+                        </tr>
+                    </table>
+
                 </fieldset>
             </form>
         </div>
