@@ -1,3 +1,15 @@
+#heading{
+    font-size: 40px;
+    font-weight: 350;
+    letter-spacing: 30px;
+}
+
+#credit{
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
 body{
     background-color: black;
 
@@ -19,8 +31,12 @@ body{
     
 }
 
+/*Persian red: #B,B4430 , raisin black: #2,31F20 */
+
+/*old purple: 4,b2c74, old cyan: 2,94C60 */
+
 #mainForm{
-    background-image: linear-gradient(to bottom, black, #294C60);
+    background-image: linear-gradient(to bottom, black, #231F20);
     width: 80%;
     margin: 0 auto;
 
@@ -36,7 +52,8 @@ fieldset{
 }
 
 #topDiv{
-    background-image: linear-gradient(to right,#294C60, rgb(75, 44, 116));
+    /*background-image: linear-gradient(to right,#8b1818, #231F20);*/
+    background-color: #8b1818;
     padding-top: 20px;
     padding-bottom: 15px;
 }
@@ -71,7 +88,7 @@ fieldset{
     height: 400px;
     margin:0 auto;
     
-    background-image: linear-gradient(to top, black, rgb(75, 44, 116));
+    background-image: linear-gradient(to top, black, #8b1818);
 
     text-align: center;
 
@@ -101,7 +118,7 @@ fieldset{
 #calculateButton:hover{
 
     background-color: white;
-    color: #294C60;
+    color: #231F20;
 
 }
 
