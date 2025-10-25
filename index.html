@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,22 +16,62 @@
 
     <body>
         <div id="topDiv">
-            <h1> Bunkulator </h1>
-            <h4> by <a href="https://github.com/subhombaruah" target="_blank"><span class="special">SimpleSide</span></a> and <a href="https://github.com/shahinJay" target="_blank"><span class="special">Eternus</span></a></h4>
+            <h1 id="heading"> Bunkulator </h1>
+            <h4 id="credit"> by <a class="links" href="https://github.com/subhombaruah" target="_blank"><span class="special">SimpleSide</span></a> and <a class="links" href="https://github.com/shahinJay" target="_blank"><span class="special">Eternus</span></a></h4>
         </div>
-        
+        <img src="background-plate.jpg" id="background-plate" alt="background-plate">
         <div id="formDiv">
             <form id="mainForm">
-                <fieldset >
-                    Total hours : <input type="text" id="totalHours" value="" class="textBoxes" autofocus> 
-                    <br>
-                    Total hours taken : <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
-                    <br>
-                    Total hours attended : <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+                <fieldset>
+                    <table id="formTable">
+                        <tr >
+                            <td id="table1left">
+                                <select name="totalVsLeft" id="totalVsLeft" value="totalKnown">
+                                    <option value="totalKnown">
+                                        Total hours
+                                    </option>
+                                    <option value="leftKnown">
+                                        Hours left
+                                    </option>
+                                </select>
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="knownValue" value="" class="textBoxes" autofocus> 
+                            </td>
+                        </tr>
+                        <tr >
+                            <td id="table1left">
+                                Total hours taken
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
+                            </td>
+                        </tr>
+                        <tr >
+                            <td id="table1left">
+                                Total hours attended
+                            </td>
+                            <td id="table1center">
+                                :
+                            </td>
+                            <td id="table1right">
+                                <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+                            </td>
+                        </tr>
 
-                    <!--input type="button" value="Calculateee" id="calculateButton" onclick="calculate()"-->
-                    <br>
-                    <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
+                        <tr>
+                            <th id="table1bottom" colspan="3">
+                                <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
+                            </th>
+                        </tr>
+                    </table>
+
                 </fieldset>
             </form>
         </div>
@@ -40,7 +82,9 @@
             Hours Bunkable: <h2 id="displayHB" class="results">N/A</h2>
         </div>
 
-
+        <div id="bottomDiv">
+            <h4 id="footerText" > Made by two passionate students </h4>
+        </div>
         <script src="script.js"></script>
     </body>
     

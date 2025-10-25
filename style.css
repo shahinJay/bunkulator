@@ -1,3 +1,32 @@
+#heading{
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 30px;
+
+    text-shadow: 0px 0px 7px black; 
+}
+
+#credit{
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+
+.links{
+    text-decoration: none;
+}
+
+#background-plate{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
 body{
     background-color: black;
 
@@ -19,39 +48,81 @@ body{
     
 }
 
+/*Persian red: #B,B4430 , raisin black: #2,31F20 */
+
+/*old purple: 4,b2c74, old cyan: 2,94C60 */
+
 #mainForm{
-    background-image: linear-gradient(to bottom, black, #294C60);
+    background-image: linear-gradient(to bottom, black, #231F20);
     width: 80%;
     margin: 0 auto;
 
-    text-align: right;
+    text-align: center;
 
     font-size: large;
     line-height: 100px;
+    
 }
 
 fieldset{
     border: 0;
-    padding-right: 29%;
+    
+}
+
+#totalVsLeft{
+    width: 30%;
+    height: 40px;
+
+    border-radius: 8px;
+    border: 0;
+    background-color:#284C60;
+    color: #ffffff;
+
+    text-align: right;
+    font-weight: bold;
+    font-family: "Bitcount Grid Single";
 }
 
 #topDiv{
-    background-image: linear-gradient(to right,#294C60, rgb(75, 44, 116));
+    background-image: linear-gradient(to top,#8b1818, #000000);
+    /*background-color: #8b1818;*/
     padding-top: 20px;
     padding-bottom: 15px;
 }
 
 #formDiv{
     padding-top: 50px;
+    opacity: 0.9;
+}
+
+#formTable{
+    width: 100%;
+}
+
+#table1left{
+    text-align: right;
+}
+
+#table1center{
+    text-align: center;
+}
+
+#table1right{
+    text-align: left;
+}
+
+#table1bottom{
+    text-align: center;
 }
 
 #displayDiv{
-    padding-top:40px;
+    opacity: 0.9;
+    padding-top: 40px;
     width: 80%;
     height: 400px;
     margin:0 auto;
     
-    background-image: linear-gradient(to top, black, rgb(75, 44, 116));
+    background-image: linear-gradient(to top, black, #8b1818);
 
     text-align: center;
 
@@ -59,31 +130,63 @@ fieldset{
     line-height: 30px;
 }
 
+#bottomDiv{
+    padding-top: 50px;
+
+    background-color: black;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+
+    border: 3px solid white;
+    border-radius: 5%;
+    border-style: dotted;
+
+    text-align: center;
+
+
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 100px;
+    letter-spacing: 10px;
+
+
+}
+
+
 .results{
-    color: rgb(209, 191, 53);
+    color: #d1bf35;
+    text-shadow: 0px 0px 30px black;
 }
 #calculateButton{
-    background-color: rgb(209, 191, 53);
+    background-color: #d1bf35;
     border: 0;
     width: 240px;
     height: 30px;
     border-radius: 20px;
-    margin-right: 15%;
+    margin: 0 auto;
 
     text-align: center;
     color: #ffffff;
     font-family: "Bitcount Grid Single";
     letter-spacing: 2px;
-    font-weight: bolder;
+    font-weight: 450;
+    text-shadow: 0px 0px 7px black;
 
 }
 
 #calculateButton:hover{
+
     background-color: white;
-    color: #294C60;
+    color: #8b1818;
+
+    font-weight: 300;
 
 }
 
 .special{
-    color: rgb(209, 191, 53);
+    color: #d1bf35;
+
+    font-weight: 400;
+    text-shadow: 0px 0px 7px black;
 }
