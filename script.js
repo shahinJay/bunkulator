@@ -28,6 +28,12 @@ function needHours(totalHours, totalHoursTaken,totalHoursAttended) {
 function calculate() {
   let selectionValue = document.getElementById("totalVsLeft").value
 
+  let totalHoursTaken = Number(document.getElementById("totalHoursTaken").value);
+  let totalHoursAttended = Number(document.getElementById("totalHoursAttended").value);
+  let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
+  let attendancePercentageResult = String(attendancePercentage(totalHoursTaken, totalHoursAttended));
+  let needHoursResult = 0
+
   if (selectionValue == "totalKnown") {
       var totalHours = Number(document.getElementById("knownValue").value);
       var hoursLeft = totalHours-totalHoursTaken
@@ -37,12 +43,6 @@ function calculate() {
       var hoursLeft = Number(document.getElementById("knownValue").value);
       var totalHours = hoursLeft + totalHoursTaken
   }
-
-  let totalHoursTaken = Number(document.getElementById("totalHoursTaken").value);
-  let totalHoursAttended = Number(document.getElementById("totalHoursAttended").value);
-  let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
-  let attendancePercentageResult = String(attendancePercentage(totalHoursTaken, totalHoursAttended));
-  let needHoursResult = 0
 
   if (Number(attendancePercentageResult) < minCriteria) {
     needHoursResult = String(needHours(totalHours, totalHoursTaken,totalHoursAttended));
