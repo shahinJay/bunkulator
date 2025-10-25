@@ -1,5 +1,5 @@
+//static functions
 function attendancePercentage(totalHoursTaken, totalHoursAttended) {
-    
   let percentage = totalHoursAttended/totalHoursTaken*100;
   return percentage;
 }
@@ -16,7 +16,7 @@ function needHours(totalHours, totalHoursTaken,totalHoursAttended) {
     let finalPercentage = 0
     let hoursNeeded = 0
 
-    while (finalPercentage <= 75 && (totalHoursTaken + hoursNeeded) < totalHours) {
+    while (finalPercentage <= minCriteria && (totalHoursTaken + hoursNeeded) < totalHours) {
         hoursNeeded += 1;
         finalPercentage = (100 * (totalHoursAttended + hoursNeeded)) / (totalHoursTaken + hoursNeeded);
         console.log(hoursNeeded, finalPercentage);
@@ -24,21 +24,27 @@ function needHours(totalHours, totalHoursTaken,totalHoursAttended) {
     return hoursNeeded
 }
 
+//dynamic functions
 function calculate() {
-    
-  let totalHours = Number(document.getElementById("totalHours").value);
+  let selectionValue = document.getElementById("totalVsLeft").value
+
+  if (selectionValue == "totalKnown") {
+      var totalHours = Number(document.getElementById("knownValue").value);
+      var hoursLeft = totalHours-totalHoursTaken
+  }
+
+  else if (selectionValue == "leftKnown") {
+      var hoursLeft = Number(document.getElementById("knownValue").value);
+      var totalHours = hoursLeft + totalHoursTaken
+  }
+
   let totalHoursTaken = Number(document.getElementById("totalHoursTaken").value);
   let totalHoursAttended = Number(document.getElementById("totalHoursAttended").value);
-
-
   let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
   let attendancePercentageResult = String(attendancePercentage(totalHoursTaken, totalHoursAttended));
-
   let needHoursResult = 0
 
-  let hoursLeft = totalHours-totalHoursTaken
-
-  if (Number(attendancePercentageResult) < 75) {
+  if (Number(attendancePercentageResult) < minCriteria) {
     needHoursResult = String(needHours(totalHours, totalHoursTaken,totalHoursAttended));
     if (needHoursResult < hoursLeft){
         
@@ -61,3 +67,6 @@ function calculate() {
     document.getElementById("displayHB").textContent = "Don't even think about it :P";
   }
 }
+
+var minCriteria = 75
+
