@@ -14,8 +14,8 @@
 
     <body>
         <div id="topDiv">
-            <h1> Bunkulator </h1>
-            <h4> by <a href="https://github.com/subhombaruah" target="_blank"><span class="special">SimpleSide</span></a> and <a href="https://github.com/shahinJay" target="_blank"><span class="special">Eternus</span></a></h4>
+            <h1 id="heading"> Bunkulator </h1>
+            <h4 id="credit"> by <a class="links" href="https://github.com/subhombaruah" target="_blank"><span class="special">SimpleSide</span></a> and <a class="links" href="https://github.com/shahinJay" target="_blank"><span class="special">Eternus</span></a></h4>
         </div>
         
         <div id="formDiv">
@@ -24,13 +24,20 @@
                     <table id="formTable">
                         <tr >
                             <td id="table1left">
-                                Total hours
+                                <select name="totalVsLeft" id="totalVsLeft" value="totalKnown">
+                                    <option value="totalKnown">
+                                        Total hours
+                                    </option>
+                                    <option value="leftKnown">
+                                        Hours left
+                                    </option>
+                                </select>
                             </td>
                             <td id="table1center">
                                 :
                             </td>
                             <td id="table1right">
-                                <input type="text" id="totalHours" value="" class="textBoxes" autofocus> 
+                                <input type="text" id="knownValue" value="" class="textBoxes" autofocus> 
                             </td>
                         </tr>
                         <tr >
@@ -73,7 +80,9 @@
             Hours Bunkable: <h2 id="displayHB" class="results">N/A</h2>
         </div>
 
-
+        <div id="bottomDiv">
+            <h4 id="footerText" > Made by two passionate students </h4>
+        </div>
         <script src="script.js"></script>
     </body>
     
