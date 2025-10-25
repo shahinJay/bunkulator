@@ -23,9 +23,7 @@
         <div id="formDiv">
             <form id="mainForm">
                 <fieldset>
-                    <table id="formTable">
-                        <tr >
-                            <td id="table1left">
+
                                 <select name="totalVsLeft" id="totalVsLeft" value="totalKnown">
                                     <option value="totalKnown">
                                         Total hours
@@ -34,43 +32,19 @@
                                         Hours left
                                     </option>
                                 </select>
-                            </td>
-                            <td id="table1center">
                                 :
-                            </td>
-                            <td id="table1right">
                                 <input type="text" id="knownValue" value="" class="textBoxes" autofocus> 
-                            </td>
-                        </tr>
-                        <tr >
-                            <td id="table1left">
-                                Total hours taken
-                            </td>
-                            <td id="table1center">
-                                :
-                            </td>
-                            <td id="table1right">
-                                <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
-                            </td>
-                        </tr>
-                        <tr >
-                            <td id="table1left">
-                                Total hours attended
-                            </td>
-                            <td id="table1center">
-                                :
-                            </td>
-                            <td id="table1right">
-                                <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <th id="table1bottom" colspan="3">
-                                <button type="button" id="calculateButton" onclick="calculate()">Calculate</button>
-                            </th>
-                        </tr>
-                    </table>
+                                Total hours taken :
+
+                                <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
+
+                                Total hours attended :
+
+                                <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+
+                                <a href="#calculateButton"><button type="button" id="calculateButton" onclick="calculate()">Calculate</button></a>
+
 
                 </fieldset>
             </form>
