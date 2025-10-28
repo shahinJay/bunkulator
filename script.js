@@ -21,7 +21,7 @@ function needHours(totalHours, totalHoursTaken,totalHoursAttended) {
         finalPercentage = (100 * (totalHoursAttended + hoursNeeded)) / (totalHoursTaken + hoursNeeded);
         console.log(hoursNeeded, finalPercentage);
     }
-    return hoursNeeded
+    return hoursNeeded;
 }
 
 //dynamic functions
@@ -30,7 +30,6 @@ function calculate() {
 
   let totalHoursTaken = Number(document.getElementById("totalHoursTaken").value);
   let totalHoursAttended = Number(document.getElementById("totalHoursAttended").value);
-  let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
   let attendancePercentageResult = String(attendancePercentage(totalHoursTaken, totalHoursAttended));
   let needHoursResult = 0
 
@@ -44,8 +43,10 @@ function calculate() {
       var totalHours = hoursLeft + totalHoursTaken
   }
 
+  let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
+
   if (Number(attendancePercentageResult) < minCriteria) {
-    needHoursResult = String(needHours(totalHours, totalHoursTaken,totalHoursAttended));
+    needHoursResult = needHours(totalHours, totalHoursTaken,totalHoursAttended);
     if (needHoursResult < hoursLeft){
         
         document.getElementById("displayHN").textContent = needHoursResult;
@@ -60,8 +61,8 @@ function calculate() {
 
   document.getElementById("displayP").textContent = attendancePercentageResult + " %";
 
-  if(bunkableHoursResult > 0){
-    document.getElementById("displayHB").textContent = bunkableHoursResult;
+  if(Number(bunkableHoursResult) > 0){
+    document.getElementById("displayHB").textContent = Math.floor(Number(bunkableHoursResult));
   }
   else{
     document.getElementById("displayHB").textContent = "Don't even think about it :P";
