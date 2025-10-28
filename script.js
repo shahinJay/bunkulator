@@ -33,17 +33,19 @@ function calculate() {
   let attendancePercentageResult = String(attendancePercentage(totalHoursTaken, totalHoursAttended));
   let needHoursResult = 0
 
+
   if (selectionValue == "totalKnown") {
       var totalHours = Number(document.getElementById("knownValue").value);
       var hoursLeft = totalHours-totalHoursTaken
   }
-
   else if (selectionValue == "leftKnown") {
       var hoursLeft = Number(document.getElementById("knownValue").value);
       var totalHours = hoursLeft + totalHoursTaken
   }
 
+
   let bunkableHoursResult = String(bunkableHours(totalHours, totalHoursTaken, totalHoursAttended));
+
 
   if (Number(attendancePercentageResult) < minCriteria) {
     needHoursResult = needHours(totalHours, totalHoursTaken,totalHoursAttended);
@@ -59,7 +61,7 @@ function calculate() {
     document.getElementById("displayHN").textContent = "You're all set dude :) "
   }
 
-  document.getElementById("displayP").textContent = attendancePercentageResult + " %";
+  document.getElementById("displayP").textContent = Number(attendancePercentageResult).toFixed(2) + " %";
 
   if(Number(bunkableHoursResult) > 0){
     document.getElementById("displayHB").textContent = Math.floor(Number(bunkableHoursResult));
@@ -70,4 +72,3 @@ function calculate() {
 }
 
 var minCriteria = 75
-
