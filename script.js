@@ -50,24 +50,29 @@ function calculate() {
   if (Number(attendancePercentageResult) < minCriteria) {
     needHoursResult = needHours(totalHours, totalHoursTaken,totalHoursAttended);
     if (needHoursResult < hoursLeft){
-        
         document.getElementById("displayHN").textContent = needHoursResult;
+        document.getElementById("displayHN").style.color = "#d1bf35";
     }
     else{
-        document.getElementById("displayHN").textContent = "You're cooked bro :( ";
+        document.getElementById("displayHN").textContent = "You're cooked :( ";
+        document.getElementById("displayHN").style.color = "red";
     }
   }
   else{
-    document.getElementById("displayHN").textContent = "You're all set dude :) "
+    document.getElementById("displayHN").textContent = "You're all set! :) ";
+    document.getElementById("displayHN").style.color = "green";
+
   }
 
   document.getElementById("displayP").textContent = Number(attendancePercentageResult).toFixed(2) + " %";
 
   if(Number(bunkableHoursResult) > 0){
     document.getElementById("displayHB").textContent = Math.floor(Number(bunkableHoursResult));
+    document.getElementById("displayHB").style.color = "#d1bf35";
   }
   else{
     document.getElementById("displayHB").textContent = "Don't even think about it :P";
+    document.getElementById("displayHB").style.color = "red";
   }
 }
 
