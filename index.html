@@ -24,17 +24,6 @@
             <form id="mainForm">
                 <fieldset>
 
-                                <select name="totalVsLeft" id="totalVsLeft" value="totalKnown">
-                                    <option value="totalKnown">
-                                        Total hours
-                                    </option>
-                                    <option value="leftKnown">
-                                        Hours left
-                                    </option>
-                                </select>
-                                :
-                                <input type="text" id="knownValue" value="" class="textBoxes" autofocus> 
-
                                 Total hours taken :
 
                                 <input type="text" id="totalHoursTaken" value="0" class="textBoxes">
@@ -42,6 +31,17 @@
                                 Total hours attended :
 
                                 <input type="text" id="totalHoursAttended" value="0" class="textBoxes">
+
+                                <select name="totalVsLeft" id="totalVsLeft" value="leftKnown">
+                                    <option value="leftKnown">
+                                        Hours left
+                                    </option>
+                                    <option value="totalKnown">
+                                        Total hours
+                                    </option>
+                                </select>
+                                :
+                                <input type="text" id="knownValue" value="" class="textBoxes" autofocus> 
 
                                 <a href="#calculateButton"><button type="button" id="calculateButton" onclick="calculate()">Calculate</button></a>
 
@@ -57,7 +57,19 @@
         </div>
 
         <div id="bottomDiv">
-            <h4 id="footerText" > Made by two passionate students </h4>
+            <h4 id="footerText" > Made by two passionate students </h4><br>
+            <p class="note"><b class="bunkulatorRed">Note:</b><br> We do not encourage bunking your classes/lectures.
+                    <b class="bunkulatorRed">Bunkulator</b> is just a tool that can be used to calculate 
+                    <ul id="note-sub-1">
+                        <li>your attendance percentage,</li>
+                        <li> the hours you need to get to <b class="special"> 75%</b>,</li>
+                        <li>and the hours you could potentially skip without dropping
+                        below <b class="special">75%</b>.</li>
+                    </ul>
+                    </p>
+                    <p class="note">
+                    Use the tool wisely and don't get us into trouble,&#x1F64F; <br>
+                    Thank you</p>
         </div>
         <script src="script.js"></script>
     </body>

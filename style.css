@@ -153,12 +153,38 @@ fieldset{
     text-align: center;
 
 
-    font-size: 0.2 rem;
-    font-weight: lighter;
-    line-height: 90vh;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 9vh;
     letter-spacing: 10px;
 
 
+}
+
+.note{
+    margin-top: 2vh;
+    text-align: center;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 3vh;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 4vh;
+    letter-spacing: 3px;
+}
+
+#note-sub-1{
+    margin-top: 0.5vh;
+    text-align: center;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 3vh;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 4vh;
+    letter-spacing: 3px;
 }
 
 
@@ -196,4 +222,11 @@ fieldset{
 
     font-weight: 400;
     text-shadow: 0px 0px 7px black;
+}
+
+.bunkulatorRed{
+    color:#ce2222;
+
+    font-weight: 600;
+
 }
