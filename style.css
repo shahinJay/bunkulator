@@ -76,7 +76,7 @@ fieldset{
 }
 
 #totalVsLeft{
-    width: 30vw;
+    width: fit-content;
     height: 4vh;
 
     border-radius: 8px;
@@ -84,7 +84,8 @@ fieldset{
     background-color:#284C60;
     color: #ffffff;
 
-    text-align: right;
+    font-size: 0.8rem;
+    text-align: center;
     font-weight: bold;
     font-family: "Bitcount Grid Single";
 }
@@ -137,12 +138,14 @@ fieldset{
     line-height: 3vh;
 }
 
+
 #bottomDiv{
     margin-top: 3vh;
-    padding-top: 3vh;
+    padding-top: 1vh;
 
     background-color: black;
     width: 80vw;
+    height: fit-content;
     margin: 0 auto;
     color: white;
 
@@ -155,35 +158,41 @@ fieldset{
 
     font-size: 1rem;
     font-weight: 300;
-    line-height: 9vh;
+    line-height: 4vh;
     letter-spacing: 10px;
 
 
 }
 
+hr{
+    border: 0.16rem;
+    border-style: dotted;
+}
+
 .note{
-    margin-top: 2vh;
+    margin-top: 2%;
+    margin-bottom: 0;
     text-align: center;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 3vh;
     color: white;
     font-size: 0.8rem;
     font-weight: 300;
-    line-height: 4vh;
+    line-height: 1rem;
     letter-spacing: 3px;
 }
 
 #note-sub-1{
-    margin-top: 0.5vh;
+    margin-top: 0;
     text-align: center;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 20%;
+    padding-right: 20%;
     padding-bottom: 3vh;
     color: white;
     font-size: 0.8rem;
     font-weight: 300;
-    line-height: 4vh;
+    line-height: 1.5rem;
     letter-spacing: 3px;
 }
 
